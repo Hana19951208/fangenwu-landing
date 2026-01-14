@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+
+  /* Minimalist Palette */
+  --color-bg: #fff;
+  --color-text: #111;
+  --color-accent: #222;
+  --color-border: #eee;
+}
+
+@utility container-custom {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 48rem;
+  /* max-w-3xl roughly */
+}
+
+/* Custom Base Styles */
+:root {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
+}
