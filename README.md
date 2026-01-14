@@ -5,18 +5,30 @@
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/react-19.0.0-61DAFB.svg)
+![Cloudflare](https://img.shields.io/badge/deploy-cloudflare-orange.svg)
 
 [🇺🇸 English Documentation](README_EN.md)
 
 ## 📖 简介 | Introduction
 
 这是 `fangenwu.cn` 的主入口页面。设计理念是 **"Less is More"**（少即是多）。
-它作为一个中心枢纽，连接了博客、图床、AI 实验室等各个子系统，同时保持了极高的加载速度和专业感。
+它作为一个中心枢纽，连接了博客、图床、AI 实验室等各个子系统，同时内置了一个轻量级的技术博客系统，保持了极高的加载速度和专业感。
 
+## 🌟 功能特性 | Features
+
+- **极简设计**: 黑白灰主色调，克制且专业的视觉风格。
+- **国际化 (i18n)**: 中/英双语无缝切换，内容实时更新。
+- **技术博客**: 
+  - 内置 Markdown 渲染引擎，支持代码高亮。
+  - 极简文章列表与详情页，丝滑的路由过渡动画。
+  - 完全静态化，无需后端数据库。
+- **高性能**: 基于 Vite (Rolldown) 构建，秒级加载。
 
 ## 🛠️ 技术栈 | Tech Stack
 
 - **Core**: ⚛️ React 19 + TypeScript
+- **Routing**: 🛣️ React Router v7
+- **Content**: 📝 React Markdown + Syntax Highlighter + Remark GFM
 - **Build**: ⚡ Vite (Rolldown)
 - **Styling**: 🎨 Tailwind CSS v4 (Zero-runtime)
 - **I18n**: 🌐 i18next (Dual language support)
@@ -47,13 +59,16 @@ pnpm dev
 ```bash
 src/
 ├── components/
+│   ├── layout/      # 布局组件 (Footer)
 │   └── ui/          # 原子组件 (Atomic Components)
-├── data/            # 数据源 (Data Source)
+├── data/            # 数据源 (Links, Blog Posts)
 ├── locales/         # 国际化资源 (I18n Resources)
 │   ├── en/          # English
 │   └── zh/          # 中文
+├── pages/           # 页面视图 (Home, Blog List, Post Detail)
+├── posts/           # Markdown 文章源文件
 ├── lib/             # 工具函数 (Utilities)
-└── App.tsx          # 主布局 (Main Layout)
+└── App.tsx          # 路由入口 (Routing)
 ```
 
 ## 🚢 部署 | Deployment

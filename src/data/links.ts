@@ -12,8 +12,9 @@ export interface LinkItem {
 export const LINKS: LinkItem[] = [
     {
         id: "blog",
-        href: "https://docs.fangenwu.cn",
+        href: "/blog",
         icon: BookOpen,
+        isExternal: false,
     },
     {
         id: "images",
