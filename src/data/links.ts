@@ -1,4 +1,4 @@
-import { BookOpen, Cloud, Database, Terminal, Cpu } from 'lucide-react';
+import { BookOpen, Cloud, Terminal, Cpu } from 'lucide-react';
 
 export const HERO_NAME = "fangenwu.cn";
 
